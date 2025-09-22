@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema(
+const bookSchema = new mongoose.Schema(
 {
     Title: { 
         type: String,
@@ -28,10 +28,10 @@ const userSchema = new mongoose.Schema(
         type: Date,
         default: Date.now,
     }
-    
+
 },
 { timestamps: true }
 );
 
-const User = mongoose.model("Books", userSchema);
-module.exports = User;
+const Book = mongoose.model("Books", bookSchema);
+module.exports = Book;
